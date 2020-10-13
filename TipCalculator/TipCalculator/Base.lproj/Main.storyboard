@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TipCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vEQ-0M-yMr" customClass="CalcButton" customModule="TipCalculator" customModuleProvider="target">
+                                <rect key="frame" x="62" y="418" width="290" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="zLB-nD-UI4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="15%"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W7I-hg-sAl" customClass="CalcButton" customModule="TipCalculator" customModuleProvider="target">
+                                <rect key="frame" x="62" y="338" width="290" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="0LA-FW-DPg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="10%"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="039-xp-i9D" customClass="CalcButton" customModule="TipCalculator" customModuleProvider="target">
+                                <rect key="frame" x="62" y="498" width="290" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="V06-cv-y1E"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="20%"/>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter bill amount..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2PC-pH-J60" customClass="CalcTextField" customModule="TipCalculator" customModuleProvider="target">
+                                <rect key="frame" x="62" y="203" width="290" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="dua-5T-77R"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LGx-6E-lKa" customClass="CalcButton" customModule="TipCalculator" customModuleProvider="target">
+                                <rect key="frame" x="62" y="658" width="290" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="9yz-L3-2rS"/>
+                                </constraints>
+                                <state key="normal" title="Calculate Tip"/>
+                                <connections>
+                                    <action selector="calculateButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xqI-Jz-Pqq"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bY0-DS-DcX">
+                                <rect key="frame" x="0.0" y="718" width="414" height="144"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="W7I-hg-sAl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1Yq-2n-wKx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bY0-DS-DcX" secondAttribute="bottom" id="3kO-cL-d3X"/>
+                            <constraint firstItem="2PC-pH-J60" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="4gC-JV-PU5"/>
+                            <constraint firstItem="039-xp-i9D" firstAttribute="top" secondItem="vEQ-0M-yMr" secondAttribute="bottom" constant="20" id="5rJ-B5-HOI"/>
+                            <constraint firstItem="bY0-DS-DcX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DSe-Id-kQ1"/>
+                            <constraint firstItem="vEQ-0M-yMr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GIA-I3-8nq"/>
+                            <constraint firstItem="LGx-6E-lKa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JDa-zy-8Cy"/>
+                            <constraint firstItem="LGx-6E-lKa" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="JjA-IQ-OQe"/>
+                            <constraint firstItem="vEQ-0M-yMr" firstAttribute="top" secondItem="W7I-hg-sAl" secondAttribute="bottom" constant="20" id="KcQ-r1-rXw"/>
+                            <constraint firstItem="W7I-hg-sAl" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="Lt0-O7-YR5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bY0-DS-DcX" secondAttribute="trailing" id="Qsk-fj-UjT"/>
+                            <constraint firstItem="LGx-6E-lKa" firstAttribute="top" secondItem="039-xp-i9D" secondAttribute="bottom" constant="100" id="TrY-ap-va5"/>
+                            <constraint firstItem="2PC-pH-J60" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="geh-ep-EK8"/>
+                            <constraint firstItem="vEQ-0M-yMr" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="oeG-Qk-g2D"/>
+                            <constraint firstItem="039-xp-i9D" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="pSW-x2-6ui"/>
+                            <constraint firstItem="W7I-hg-sAl" firstAttribute="top" secondItem="2PC-pH-J60" secondAttribute="bottom" constant="100" id="rSa-cT-SJ7"/>
+                            <constraint firstItem="bY0-DS-DcX" firstAttribute="top" secondItem="LGx-6E-lKa" secondAttribute="bottom" id="uEn-OK-9Ee"/>
+                            <constraint firstItem="vEQ-0M-yMr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="w6y-RM-bsJ"/>
+                            <constraint firstItem="039-xp-i9D" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xwF-kt-yIO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="amountLabel" destination="bY0-DS-DcX" id="TLS-3U-HL8"/>
+                        <outlet property="amountTextField" destination="2PC-pH-J60" id="Rl6-EC-OPU"/>
+                        <outlet property="calculateButton" destination="LGx-6E-lKa" id="EEf-5M-Ffb"/>
+                        <outlet property="fifteenPercentButton" destination="vEQ-0M-yMr" id="aZS-4E-OYg"/>
+                        <outlet property="tenPercentButton" destination="W7I-hg-sAl" id="3SL-Ja-YCf"/>
+                        <outlet property="twentyPercentButton" destination="039-xp-i9D" id="8uD-AM-RaM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="119"/>
+        </scene>
+    </scenes>
+</document>
